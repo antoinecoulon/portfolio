@@ -36,7 +36,7 @@ h1 {
     font-size: 5rem;
 }
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -65,14 +65,21 @@ p {
     align-items: center;
 }
 
-.w40 {
-    width: 40%;
+.w20 {
+    width: 20%;
 }
 .w60 {
     width: 60%;
 }
 .w33 {
     width: 33%;
+}
+
+#profile-photo {
+    max-width: 80%;
+    border-radius: 50%;
+    transform: translate(10%, 0);
+    border: 1.8px solid #000;
 }
 
 .dark {
