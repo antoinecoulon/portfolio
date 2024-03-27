@@ -90,3 +90,19 @@ p {
 .text-align {
     text-align: center;
 }
+
+.skill img {
+    max-width: 5rem;
+    padding-top: 1rem;
+}
+h3 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.vignette img {
+    max-width: 200px;
+    max-height: 200px;
+    
+}
+
