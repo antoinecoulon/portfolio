@@ -7,6 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    color: #2B303A;
+    background-color: #F0E9EC;
 }
 
 .slider {
@@ -32,12 +34,13 @@ body {
 }
 
 h1 {
-    color: #fff;
+    color: #F0E9EC;
     font-size: 5rem;
 }
 h2 {
     font-size: 2rem;
     font-weight: 500;
+    padding-bottom: 2rem;
 }
 
 p {
@@ -46,7 +49,7 @@ p {
 }
 
 .slider-content p {
-    color: #fff;
+    color: #F0E9EC;
     font-size: 1.8rem;
     font-weight: 200;
 }
@@ -79,12 +82,12 @@ p {
     max-width: 80%;
     border-radius: 50%;
     transform: translate(10%, 0);
-    border: 1.8px solid #000;
+    border: 1.8px solid #2B303A;
 }
 
 .dark {
-    background-color: #000;
-    color: #fff;
+    background-color: #2B303A;
+    color: #F0E9EC;
 }
 
 .text-align {
@@ -93,16 +96,30 @@ p {
 
 .skill img {
     max-width: 5rem;
-    padding-top: 1rem;
 }
+
 h3 {
     font-weight: 400;
     font-size: 1rem;
 }
 
-.vignette img {
-    max-width: 200px;
-    max-height: 200px;
-    
+.projects {
+    display: flex;
+    justify-content: space-between;
 }
+
+.vignette {
+    height: 250px;
+    width: 250px;
+    border: 1px solid #92DCE5;
+}
+.vignette img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.vignette a {
+    text-decoration: none;
+}
+
 
