@@ -130,4 +130,9 @@ h3 {
     text-decoration: none;
 }
 
-
+#copyright {
+    text-align: center;
+    color: #F0E9EC;
+    font-size: 1rem;
+    font-style: italic;
+}
