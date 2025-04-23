@@ -3,27 +3,30 @@ name: Deploy to GitHub Pages (manual)
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write  # pour autoriser le push dans gh-pages
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout the repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build the project
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          branch: gh-pages # la branche de destination
+          folder: dist      # le dossier généré par vite
