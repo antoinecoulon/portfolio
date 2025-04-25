@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -8,6 +9,7 @@
     --color-card-background: #1F2937; /* Fond des cartes */
     --color-border: #334155;          /* Bordures claires */
     --color-highlight: #3B82F6;       /* Bleu pour les éléments en surbrillance */
+    --font-inter: "Inter", sans-serif
 }
 
 body {
