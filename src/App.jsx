@@ -1,9 +1,15 @@
-import './App.css'
+import Header from './components/header/Header'
+import Home from './pages/Home'
+import Footer from './components/footer/Footer'
 
 function App() {
 
   return (
-    <h1 className="text-3xl">Hello from React !</h1>
+    <div className='app h-screen w-screen flex flex-col justify-between items-center'>
+      <Header />
+      <Home />
+      <Footer />
+    </div>
   )
 }
 

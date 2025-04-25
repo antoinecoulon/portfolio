@@ -9,3 +9,11 @@
     --color-border: #334155;          /* Bordures claires */
     --color-highlight: #3B82F6;       /* Bleu pour les éléments en surbrillance */
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
