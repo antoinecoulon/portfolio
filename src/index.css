@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+    --color-background: #121212;      /* Fond sombre */
+    --color-text-primary: #E0E0E0;    /* Texte clair */
+    --color-accent-primary: #1E3A8A;  /* Bleu foncé */
+    --color-accent-secondary: #64748B;/* Gris clair */
+    --color-card-background: #1F2937; /* Fond des cartes */
+    --color-border: #334155;          /* Bordures claires */
+    --color-highlight: #3B82F6;       /* Bleu pour les éléments en surbrillance */
+}
