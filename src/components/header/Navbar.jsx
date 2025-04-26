@@ -5,7 +5,7 @@ function Navbar() {
         <nav>
             <ul className='flex gap-4'>
                 <li><NavLink to={"/"} className={({ isActive }) => isActive ? "active" : ""}>Accueil</NavLink></li>
-                <li>Projets</li>
+                <li><NavLink to={"/projects"} className={({ isActive }) => isActive ? "active" : ""}>Projets</NavLink></li>
                 <li><NavLink to={"/skills"} className={({ isActive }) => isActive ? "active" : ""}>Compétences</NavLink></li>
                 <li>Parcours</li>
                 <li><NavLink to={"/about"} className={({ isActive }) => isActive ? "active" : ""}>A propos</NavLink></li>
