@@ -1,13 +1,14 @@
+import { NavLink } from "react-router"
 
 function Navbar() {
     return (
         <nav>
             <ul className='flex gap-4'>
-                <li>Accueil</li>
+                <li><NavLink to={"/"} className={({ isActive }) => isActive ? "active" : ""}>Accueil</NavLink></li>
                 <li>Projets</li>
-                <li>Compétences</li>
+                <li><NavLink to={"/skills"} className={({ isActive }) => isActive ? "active" : ""}>Compétences</NavLink></li>
                 <li>Parcours</li>
-                <li>About</li>
+                <li><NavLink to={"/about"} className={({ isActive }) => isActive ? "active" : ""}>A propos</NavLink></li>
                 <li>Contact</li>
             </ul>
         </nav>
