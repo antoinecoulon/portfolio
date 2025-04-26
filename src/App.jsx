@@ -1,13 +1,13 @@
 import Header from './components/header/Header'
-import Home from './pages/Home'
 import Footer from './components/footer/Footer'
+import AppRoutes from './routes'
 
 function App() {
 
   return (
     <div className='app font-inter h-screen w-screen flex flex-col justify-between items-center'>
       <Header />
-      <Home />
+      <AppRoutes />
       <Footer />
     </div>
   )
