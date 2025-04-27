@@ -1,10 +1,9 @@
+import './Footer.css'
 
-function Footer() {
+export default function Footer() {
     return (
-        <footer className="w-full p-2 text-center italic text-xs font-light">
+        <footer>
             2025 &copy; Antoine COULON. Tous droits réservés.
         </footer>
     )
 }
-
-export default Footer
