@@ -1,0 +1,24 @@
+.nav-list {
+    display: flex;
+    list-style: none;
+    color: #64748B;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.home {
+    font-size: 16px;
+}
+
+.nav-list > li {
+    margin-left: 32px;
+}
+
+.nav-list li > a {
+    text-decoration: none;
+    color: #64748B;    
+}
+
+.nav-list li > a.active {
+    color: #3B82F6;
+}

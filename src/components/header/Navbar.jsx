@@ -1,10 +1,14 @@
 import { NavLink } from "react-router"
+import { RiHome3Fill } from "react-icons/ri";
+import './Navbar.css'
 
-function Navbar() {
+export default function Navbar() {
     return (
         <nav>
-            <ul className='flex gap-4'>
-                <li><NavLink to={"/"} className={({ isActive }) => isActive ? "active" : ""}>Accueil</NavLink></li>
+            <ul className='nav-list'>
+                <li><NavLink to={"/"} className={({ isActive }) => isActive ? "active" : ""}>
+                    <RiHome3Fill className="home" />
+                </NavLink></li>
                 <li><NavLink to={"/projects"} className={({ isActive }) => isActive ? "active" : ""}>Projets</NavLink></li>
                 <li><NavLink to={"/skills"} className={({ isActive }) => isActive ? "active" : ""}>Compétences</NavLink></li>
                 <li><NavLink to={"/parcours"} className={({ isActive }) => isActive ? "active" : ""}>Parcours</NavLink></li>
@@ -14,5 +18,3 @@ function Navbar() {
         </nav>
     )
 }
-
-export default Navbar
