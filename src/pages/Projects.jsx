@@ -1,4 +1,3 @@
-import { Accordion, AccordionItem } from "@heroui/react";
 
 /**
  * TODO: 
@@ -16,36 +15,9 @@ export default function Projects() {
 
   return (
     <section className="w-3/5">
-      <Accordion defaultExpandedKeys={["1"]}>
-        <AccordionItem
-          key="1"
-          aria-label="Projet 1"
-          subtitle="Appuyer pour ouvrir"
-          title="Projet 1"
-        >
-          {defaultContent}
-        </AccordionItem>
-        <AccordionItem
-          key="2"
-          aria-label="Projet 2"
-          subtitle={
-            <span>
-              Appuyer pour ouvrir
-            </span>
-          }
-          title="Projet 2"
-        >
-          {defaultContent}
-        </AccordionItem>
-        <AccordionItem
-          key="3"
-          aria-label="Projet 3"
-          subtitle="Appuyer pour ouvrir"
-          title="Projet 3"
-        >
-          {defaultContent}
-        </AccordionItem>
-      </Accordion>
+      
+      {defaultContent}
+         
     </section>
   );
 }
