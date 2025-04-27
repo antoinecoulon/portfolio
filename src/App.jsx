@@ -1,11 +1,12 @@
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import AppRoutes from './routes'
+import './App.css'
 
 function App() {
 
   return (
-    <div className='app font-inter h-screen w-screen flex flex-col justify-between items-center'>
+    <div className='app'>
       <Header />
       <AppRoutes />
       <Footer />
