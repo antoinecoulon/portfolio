@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
-@import "tailwindcss";
 
-@theme {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
     --color-background: #121212;      /* Fond sombre */
     --color-text-primary: #E0E0E0;    /* Texte clair */
     --color-accent-primary: #1E3A8A;  /* Bleu foncé */
@@ -9,14 +14,12 @@
     --color-card-background: #1F2937; /* Fond des cartes */
     --color-border: #334155;          /* Bordures claires */
     --color-highlight: #3B82F6;       /* Bleu pour les éléments en surbrillance */
-    --font-inter: "Inter", sans-serif;
-    --font-sans: InterVariable, sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-color: var(--color-background);
     color: var(--color-text-primary);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin: 0 16px;    
 }
