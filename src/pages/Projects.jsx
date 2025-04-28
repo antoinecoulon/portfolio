@@ -1,8 +1,16 @@
+// Swiper React components
+import { Swiper, SwiperSlide} from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import Project from '../components/Project'
+
+// Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation';
+import './Projects.css'
+import { projects } from '../data/projects';
 
 /**
  * TODO: 
- * 
- * Créer un composant Projet avec une image et une description
  * Importer ici le fichier projects.js avec les projets
  * Faire passer chaque projet en props d'un accordéon
  * 
@@ -10,14 +18,33 @@
  */
 
 export default function Projects() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const projectsDetails = projects.map(project => {
+    return <Project 
+      title={project.title}
+      description={project.description}
+      screenshot={project.screenshot}
+      repo={project.repo}
+      live={project.live}
+    />
+  })
+
+  const slides = projectsDetails.map(slide => (
+    <SwiperSlide className='swiper-slide'>{slide}</SwiperSlide>
+  ))
 
   return (
-    <section className="w-3/5">
+    <section className="projects">
       
-      {defaultContent}
-         
+      <Swiper
+        className='swiper'
+        modules={[Navigation, Pagination]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+      >
+        {slides}
+      </Swiper>
     </section>
   );
 }
