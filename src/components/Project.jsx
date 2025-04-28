@@ -1,4 +1,7 @@
-export default function Project(projects) {
+import './Project.css'
+
+export default function Project(projects) {    
+    
     return (
         <article>
             <div className="screenshots">
@@ -8,9 +11,22 @@ export default function Project(projects) {
                 <h2>{projects.title}</h2>
                 <p>{projects.description}</p>
             </div>
-            <div className="links">
-                <span>{projects.repo}</span>
-                <span>{projects.live}</span>
+            <div className="others">
+                <div className="links">
+                    <span>{projects.repo}</span>
+                    <span>{projects.live}</span>
+                </div>
+                <div className="technos">
+                    {
+                        projects.stack.map(stack => (
+                            <span>
+                                {stack.name}
+                                {stack.logo}
+                            </span>
+                        ))
+                    }
+                    
+                </div>
             </div>
         </article>
     )

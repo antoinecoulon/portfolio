@@ -1,0 +1,40 @@
+article {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px - 32px);
+}
+
+article > div.screenshots {
+    width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    
+}
+
+article > div.screenshots > img {
+    border: 1px solid var(--color-highlight);
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    /* box-shadow: 0 2px 4px rgba(31, 69, 131, 0.2); */
+}
+
+article > div.infos {
+    max-width: 80%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6em;
+}
+
+article > div.infos > h2 {
+    font-size: 1.6rem;
+    color: var(--color-highlight);
+}

@@ -6,6 +6,8 @@ import Project from '../components/Project'
 // Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import './Projects.css'
 import { projects } from '../data/projects';
 
@@ -25,6 +27,7 @@ export default function Projects() {
       screenshot={project.screenshot}
       repo={project.repo}
       live={project.live}
+      stack={project.stack}
     />
   })
 
