@@ -1,29 +1,23 @@
-function Skills() {
-    const learning = "React.js"
+import SkillsCarousel from "../components/SkillsCarousel"
+
+export default function Skills() {
+    const learning = {name: "React.js", logo: ""}
     const skills = [
-        {
-            name: "HTML", 
-            logo: ""
-        },
-        {
-            name: "CSS",
-            logo: ""
-        }
+        {name: "HTML", logo: ""},
+        {name: "CSS", logo: ""},
+        {name: "JavaScript", logo: "/icons/javascript.svg"},
+        {name: "React", logo: "/icons/react.svg"},
+        {name: "Node.js", logo: "/icons/nodejs.svg"},
     ]
     
     return (
-        <section className="skills flex flex-col items-center">
-            <h2>Actuellement, j'étudie: <span className="text-2xl font-bold text-highlight ml-4">{learning}</span></h2>
+        <section className="skills">
+            <h2>Actuellement, j'étudie: <span>{learning.name} {learning.logo}</span></h2>
             <div className="carousel">
-            {skills.map(skill => (
-                <div key={skill.name} className="mt-8" >
-                    <h3>{skill.name}</h3>
-                    <span>{skill.logo}</span>
-                </div>
-            ))}
+                <SkillsCarousel 
+                    skills={skills}
+                />
             </div>
         </section>
     )
 }
-
-export default Skills
