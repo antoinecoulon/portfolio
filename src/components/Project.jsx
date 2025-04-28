@@ -18,8 +18,8 @@ export default function Project(projects) {
                 </div>
                 <div className="technos">
                     {
-                        projects.stack.map(stack => (
-                            <span>
+                        projects.stack.map((stack, index) => (
+                            <span key={index}>
                                 {stack.name}
                                 {stack.logo}
                             </span>
