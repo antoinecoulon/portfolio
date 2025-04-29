@@ -3,8 +3,10 @@
 main {
   font-family: "Monoton", sans-serif;
   width: 100%;
+  min-height: calc(100vh - 60px - 32px);
   text-align: center;
-  font-size: 132px;
+  font-size: 116px;
+  overflow: hidden;
 }
 
 .box {

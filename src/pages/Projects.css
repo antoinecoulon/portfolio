@@ -1,8 +1,10 @@
 section.projects {
     width: 96%;
-    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
 }
 
 .swiper {
     height: 100%;
+    overflow: hidden;
 }
