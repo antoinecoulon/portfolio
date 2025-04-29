@@ -1,5 +1,6 @@
 import { experiences } from "../data/experiences";
 import { Timeline } from "@chakra-ui/react"
+import './Experience.css'
 
 /*
 
@@ -14,20 +15,29 @@ import { Timeline } from "@chakra-ui/react"
 
 
 export default function Experience() {
+  
+  
   return (
-    <section className="timeline relative p-10">
-      <div className="timeline-frise absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-highlight"></div>
-      <div className="timeline-items space-y-12">
+    <section className="timeline-section">
+      <Timeline.Root className="timeline" size="xl" colorPalette="blue">
+
         {experiences.map((exp, index) => (
-          <div key={index} className={`timeline-item flex items-center w-full ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-            <div className="w-5/12 p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-bold text-highlight">{exp.experience}</h3>
-                <span className="text-sm font-semibold text-accent-secondary">{exp.year}</span>
-                <p className="text-sm text-gray-600">{exp.description}</p>
-            </div>
-          </div>
+          <Timeline.Item key={index}>
+            <Timeline.Content width="auto">
+              <Timeline.Title>{exp.year}</Timeline.Title>
+            </Timeline.Content>
+            <Timeline.Connector>
+              <Timeline.Separator />
+              <Timeline.Indicator />
+            </Timeline.Connector>
+            <Timeline.Content flex="1">
+              <Timeline.Title>{exp.experience}</Timeline.Title>
+              <Timeline.Description>{exp.description}</Timeline.Description>
+            </Timeline.Content>
+        </Timeline.Item>
         ))}
-      </div>
+      
+      </Timeline.Root>
     </section>
   );
 }
