@@ -1,0 +1,25 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.about > img {
+    width: 16rem;
+    height: 16rem;
+    border: 4px dashed var(--color-highlight);
+    border-radius: 128px;
+}
+
+.about-text {
+    width: 32rem;
+    text-align: justify;
+}
+
+.about-text > h2 {
+    margin: 16px 0;
+    padding: 8px;
+    border: 1px solid var(--color-highlight);
+}
