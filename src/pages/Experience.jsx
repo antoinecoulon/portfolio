@@ -1,4 +1,5 @@
 import { experiences } from "../data/experiences";
+import { Timeline } from "@chakra-ui/react"
 
 /*
 
@@ -12,7 +13,7 @@ import { experiences } from "../data/experiences";
 */
 
 
-export default function Timeline() {
+export default function Experience() {
   return (
     <section className="timeline relative p-10">
       <div className="timeline-frise absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-highlight"></div>

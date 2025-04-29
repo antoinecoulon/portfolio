@@ -3,16 +3,23 @@ import './index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
-import { Provider } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  createSystem,
+  defaultConfig,
+} from "@chakra-ui/react"
 
 import App from './App.jsx'
 
+const system = createSystem(defaultConfig)
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Provider>
+    <ChakraProvider value={system}>
+      <BrowserRouter>
         <App />
-      </Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </ChakraProvider>
   </StrictMode>,
 )

@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Skills from "./pages/Skills"
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Timeline from "./pages/Timeline";
+import Experience from "./pages/Experience";
 
 function AppRoutes() {
     return (
@@ -11,7 +11,7 @@ function AppRoutes() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/parcours" element={<Timeline />} />
+            <Route path="/parcours" element={<Experience />} />
             <Route path="/about" element={<About />} />
         </Routes>
     )

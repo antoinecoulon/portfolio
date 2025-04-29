@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^3.16.1",
+    "@chakra-ui/theme": "^3.4.6",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "framer-motion": "^12.9.2",
     "keen-slider": "^6.8.6",
     "motion": "^12.9.2",
     "react": "^19.0.0",
