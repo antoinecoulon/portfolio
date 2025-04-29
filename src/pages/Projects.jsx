@@ -11,14 +11,6 @@ import 'swiper/css/pagination';
 import './Projects.css'
 import { projects } from '../data/projects';
 
-/**
- * TODO: 
- * Importer ici le fichier projects.js avec les projets
- * Faire passer chaque projet en props d'un accordéon
- * 
- * 
- */
-
 export default function Projects() {
   const projectsDetails = projects.map(project => {
     return <Project 

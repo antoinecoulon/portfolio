@@ -7,10 +7,15 @@ main {
   text-align: center;
   font-size: 116px;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .box {
-  margin: 1em 0;
+  margin:  0;
 }
 
 .letter {

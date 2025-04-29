@@ -2,15 +2,15 @@ import "./About.css";
 
 export default function About() {
   return (
-    <section className="about flex-col items-center w-4/5">
+    <section className="about">
       <img
-        className="photo w-50"
+        className="photo"
         src="https://avatar.iran.liara.run/public/boy"
         alt="Avatar placeholder"
       />
       <div className="about-text">
-        <h2 className="text-2xl ml-8 mb-4 mt-16 self-start">A propos de moi</h2>
-        <p className="text-justify">
+        <h2>A propos de moi</h2>
+        <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac orci
           a ligula commodo luctus non vitae leo. Aliquam erat volutpat. Ut vitae
           rhoncus eros. Aenean porttitor justo vel magna tincidunt, non lacinia
