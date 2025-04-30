@@ -1,24 +1,107 @@
 .nav-list {
-    display: flex;
-    list-style: none;
-    color: #64748B;
-    font-weight: 400;
-    font-size: 14px;
+  display: flex;
+  list-style: none;
+  color: #64748b;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  transition: transform 0.3s ease-in-out;
 }
 
 .home {
-    font-size: 16px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-list > li {
-    margin-left: 32px;
+  margin-left: 32px;
 }
 
 .nav-list li > a {
-    text-decoration: none;
-    color: #64748B;    
+  text-decoration: none;
+  color: #64748b;
+  white-space: nowrap;
 }
 
 .nav-list li > a.active {
-    color: #3B82F6;
+  color: #3b82f6;
+}
+
+/* Menu Hamburger */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Cache la liste de navigation sur petits écrans */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le menu */
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .nav-list.active {
+    display: flex; /* Affiche la liste quand elle a la classe active */
+    text-align: center;
+  }
+
+  .nav-list > li {
+    margin-left: 0; /* Réduit l'espace entre les éléments */
+    margin-bottom: 16px; /* Ajoute de l'espace entre les éléments */
+  }
+
+  .hamburger {
+    display: block; /* Affiche le bouton hamburger */
+    cursor: pointer;
+    z-index: 10; /* Assure qu'il soit au-dessus du menu */
+    padding: 10px;
+  }
+
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #64748b;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Animation pour l'icône hamburger */
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg);
+    margin-top: 8px;
+  }
+
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    margin-top: -8px;
+  }
+
+  /* Croissant pour fermer le menu */
+  .close-menu {
+    display: flex;
+    justify-content: flex-end; /* Place la croix en haut à droite */
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .close-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #64748b;
+    transform: rotate(45deg); /* Croix */
+    transition: all 0.3s ease;
+  }
+
+  .close-menu.open div {
+    transform: rotate(0deg); /* Effet d'animation pour fermer */
+  }
 }
