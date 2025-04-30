@@ -25,6 +25,7 @@ section.projects {
   
   /* Responsive Swiper */
   @media (max-width: 768px) {
+       
     .swiper {
       padding: 0 10px 60px; /* ajoute un peu de marge à gauche/droite */
     }

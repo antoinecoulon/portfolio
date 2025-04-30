@@ -24,15 +24,15 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <Timeline.Item key={index}>
             <Timeline.Content width="auto">
-              <Timeline.Title>{exp.year}</Timeline.Title>
+              <Timeline.Title className="exp-year">{exp.year}</Timeline.Title>
             </Timeline.Content>
             <Timeline.Connector>
               <Timeline.Separator />
               <Timeline.Indicator />
             </Timeline.Connector>
             <Timeline.Content flex="1">
-              <Timeline.Title>{exp.experience}</Timeline.Title>
-              <Timeline.Description>{exp.description}</Timeline.Description>
+              <Timeline.Title className="exp-title">{exp.experience}</Timeline.Title>
+              <Timeline.Description className="exp-description">{exp.description}</Timeline.Description>
             </Timeline.Content>
         </Timeline.Item>
         ))}
