@@ -3,8 +3,18 @@
 }
 
 .timeline {
-    width: 60%;
+    width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.timeline-item {
+    align-items: start;
+}
+
+.exp-title, .exp-description {
+    width: 100%;
+    max-width: 500px;
 }
 
 .exp-description {
@@ -18,6 +28,41 @@
 }
 
 .exp-year {
-    font-weight: 800;
-    margin-top: 4px;
+    width: 40px;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    
+    .timeline {
+        display: flex;
+        flex-direction: column; 
+        overflow-y: auto;
+        
+        padding-right: 8px;
+        padding-top: 8px; 
+    }
+}
+
+@media (max-width: 468px) {
+    .timeline {
+        display: flex;
+        flex-direction: column; 
+        overflow-y: auto;
+        max-height: 400px;
+        padding-right: 8px;
+        padding-top: 8px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .timeline {
+        display: flex;
+        flex-direction: column; 
+        overflow-y: auto;
+        max-height: 320px;
+        padding-right: 8px;
+        padding-top: 8px; 
+    }
 }

@@ -22,7 +22,7 @@ export default function Experience() {
       <Timeline.Root className="timeline" size="xl" colorPalette="blue">
 
         {experiences.map((exp, index) => (
-          <Timeline.Item key={index}>
+          <Timeline.Item key={index} className="timeline-item">
             <Timeline.Content width="auto">
               <Timeline.Title className="exp-year">{exp.year}</Timeline.Title>
             </Timeline.Content>
