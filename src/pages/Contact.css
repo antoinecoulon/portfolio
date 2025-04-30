@@ -32,7 +32,19 @@ section.contact > .contact-title > .contactez-moi {
 
 @media (max-width: 768px) {
     section.contact {
-        max-height: 600px;
+        max-height: 700px;
         overflow: auto;
+        padding-right: 8px;
+    }
+
+    .contact-form > .contact-stack > .input-box {
+        padding: 24px;
+        margin-bottom: 16px;
+        gap: 4px;
+    }
+    
+    .contact-form > .contact-stack > .input-box:nth-child(3) > .textarea{
+        height: 120px;
+        padding: 8px;
     }
 }
