@@ -1,68 +1,49 @@
 .timeline-section {
     width: 100%;
-}
-
-.timeline {
+  }
+  
+  .timeline {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.timeline-item {
-    align-items: start;
-}
-
-.exp-title, .exp-description {
+    overflow-y: auto;
+    max-height: 100dvh; /* hauteur dynamique, fiable sur mobile */
+    padding: 8px 8px 2rem 0; /* padding bottom pour éviter les barres système */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-item {
+    align-items: flex-start;
+  }
+  
+  .exp-title,
+  .exp-description {
     width: 100%;
     max-width: 500px;
-}
-
-.exp-description {
+  }
+  
+  .exp-description {
     padding: 0 8px 16px 0px;
     margin-bottom: 16px;
     color: var(--color-text-primary);
-}
-
-.exp-title {
+  }
+  
+  .exp-title {
     color: var(--color-highlight);
-}
-
-.exp-year {
+  }
+  
+  .exp-year {
     width: 40px;
     text-align: right;
     font-weight: bold;
-}
-
-@media (max-width: 768px) {
-    
+  }
+  
+  /* OPTIONNEL : si tu veux limiter un peu plus la hauteur sur très petits écrans */
+  
+  @media (max-width: 468px) {
     .timeline {
-        display: flex;
-        flex-direction: column; 
-        overflow-y: auto;
-        
-        padding-right: 8px;
-        padding-top: 8px; 
+      max-height: 90dvh;
     }
-}
-
-@media (max-width: 468px) {
-    .timeline {
-        display: flex;
-        flex-direction: column; 
-        overflow-y: auto;
-        max-height: 400px;
-        padding-right: 8px;
-        padding-top: 8px; 
-    }
-}
-
-@media (max-width: 320px) {
-    .timeline {
-        display: flex;
-        flex-direction: column; 
-        overflow-y: auto;
-        max-height: 320px;
-        padding-right: 8px;
-        padding-top: 8px; 
-    }
-}
+  }
+  
