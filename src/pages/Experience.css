@@ -7,8 +7,8 @@
     max-width: 1000px;
     margin: 0 auto;
     overflow-y: auto;
-    max-height: 100dvh; /* hauteur dynamique, fiable sur mobile */
-    padding: 8px 8px 2rem 0; /* padding bottom pour éviter les barres système */
+    max-height: 100dvh;
+    padding: 8px 8px 2rem 0;
     display: flex;
     flex-direction: column;
   }
@@ -23,27 +23,60 @@
     max-width: 500px;
   }
   
+  .exp-title {
+    color: var(--color-highlight);
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  
   .exp-description {
     padding: 0 8px 16px 0px;
     margin-bottom: 16px;
     color: var(--color-text-primary);
-  }
-  
-  .exp-title {
-    color: var(--color-highlight);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
   }
   
   .exp-year {
     width: 40px;
-    text-align: right;
+    text-align: justify;
     font-weight: bold;
+    font-size: 0.8rem;
   }
   
-  /* OPTIONNEL : si tu veux limiter un peu plus la hauteur sur très petits écrans */
+  /* Écran ≥ 600px : taille moyenne */
+  @media (min-width: 600px) {
+    .exp-title {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+    }
   
-  @media (max-width: 468px) {
-    .timeline {
-      max-height: 90dvh;
+    .exp-description {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  
+    .exp-year {
+      font-size: 0.9rem;
+      width: 50px;
+    }
+  }
+  
+  /* Écran ≥ 1100px : taille large */
+  @media (min-width: 1100px) {
+    .exp-title {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  
+    .exp-description {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  
+    .exp-year {
+      font-size: 1rem;
+      width: 60px;
     }
   }
   
