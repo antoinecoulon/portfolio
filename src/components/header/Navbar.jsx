@@ -64,7 +64,14 @@ export default function Navbar() {
             A propos
           </NavLink>
         </li>
-        <li>Contact</li>
+        <li>
+          <NavLink
+            to={"/contact"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

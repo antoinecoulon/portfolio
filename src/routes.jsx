@@ -4,6 +4,7 @@ import Skills from "./pages/Skills"
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
 function AppRoutes() {
     return (
@@ -13,6 +14,7 @@ function AppRoutes() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/parcours" element={<Experience />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
     )
 }

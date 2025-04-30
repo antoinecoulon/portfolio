@@ -1,0 +1,38 @@
+section.contact {
+    width: 72%;
+}
+
+section.contact > .contact-title > .contactez-moi {
+    color: var(--color-highlight);
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.contact-form > .contact-stack > .input-box {
+    padding: 32px;
+    border: 1px dashed var(--color-highlight);
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form > .contact-stack > .input-box:nth-child(1) > .input {
+    padding: 16px;
+}
+
+.contact-form > .contact-stack > .input-box:nth-child(2) > .input  {
+    padding: 16px;
+}
+
+.contact-form > .contact-stack > .input-box:nth-child(3) > .textarea{
+    height: 200px;
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    section.contact {
+        max-height: 600px;
+        overflow: auto;
+    }
+}
