@@ -160,3 +160,35 @@ main {
     transform: translateY(10px);
   }
 }
+
+/* Responsive pour tablettes et petits écrans */
+@media (max-width: 1024px) {
+  main {
+    font-size: 90px;
+    padding: 0 20px;
+  }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+  main {
+    font-size: 64px;
+    padding: 0 16px;
+  }
+
+  .letter {
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  main {
+    font-size: 48px;
+    padding: 0 12px;
+  }
+
+  .letter {
+    letter-spacing: 0.05em;
+  }
+}

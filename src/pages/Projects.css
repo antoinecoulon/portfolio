@@ -1,10 +1,60 @@
 section.projects {
-    width: 96%;
+    width: 100%;
     min-height: 500px;
+    margin: 0 auto;
     overflow: hidden;
+    padding-top: 16px;
+  padding-bottom: 32px;
+  box-sizing: border-box;
 }
 
 .swiper {
-    height: 100%;
-    overflow: hidden;
+    min-height: auto;
+  overflow: visible;
+    padding-bottom: 50px;
 }
+
+/* Style pour chaque slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  padding: 0 16px;
+  box-sizing: border-box;
+  }
+  
+  /* Responsive Swiper */
+  @media (max-width: 768px) {
+    .swiper {
+      padding: 0 10px 60px; /* ajoute un peu de marge à gauche/droite */
+    }
+  
+    .swiper-slide {
+      flex-direction: column;
+      padding: 0 10px;
+    }
+  }
+  
+  /* Pagination bullets */
+  .swiper-pagination-bullet {
+    background: #3b82f6;
+    opacity: 0.5;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #1d4ed8;
+    opacity: 1;
+  }
+  
+  /* Navigation buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #3b82f6;
+  }
+  
+  @media (max-width: 480px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      scale: 0.8; /* réduit un peu les boutons sur très petits écrans */
+    }
+  }
