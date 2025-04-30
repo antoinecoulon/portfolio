@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
 
 main {
   font-family: "Monoton", sans-serif;
   width: 100%;
   min-height: calc(100vh - 60px - 32px);
   text-align: center;
-  font-size: 116px;
+  font-size: 132px;
   overflow: hidden;
 
   display: flex;
@@ -23,7 +23,7 @@ main {
   letter-spacing: 0.2em;
   transition: transform 0.2s;
   color: #1f2937;
-  font-family: "Press Start 2P", system-ui;
+  font-family: "Monofett", system-ui;
   animation: pressDown 2s infinite;
 }
 
