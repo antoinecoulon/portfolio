@@ -1,14 +1,35 @@
 import { Stack, Input, Textarea } from "@chakra-ui/react";
+import { useForm } from "@formspree/react";
 import "./Contact.css";
 
+{/**
+      TODO: validation, loader, redirect reset
+  */}
+
 export default function Contact() {
+  const [state, handleSubmit, reset] = useForm('movdjblb')
+
+  if (state.submitting) {
+    return <p>Submitting...</p>
+  }
+  if (state.succeeded) {
+    return (
+      <section className="contact">
+        <div className="succeeded-box">
+          <h2>Merci pour votre retour, je m'efforce de regarder régulièrement ma boite mail!</h2>
+          <button onClick={reset}>Reset</button>
+        </div>
+      </section>
+    )
+  }
+  
   return (
     <section className="contact">
       <h2 className="contact-title">
         Une question, un bug à signaler ?
         <span className="contactez-moi">Contactez-moi</span>
       </h2>
-      <form action="" className="contact-form">
+      <form action={handleSubmit} className="contact-form">
         <Stack spacing="32px" className="contact-stack">
           <div className="input-box">
             <label htmlFor="name">Nom:</label>
@@ -41,6 +62,7 @@ export default function Contact() {
             />
           </div>
         </Stack>
+        <button type="submit" className="contact-button" disabled={state.submitting}>Envoyer</button>
       </form>
     </section>
   );

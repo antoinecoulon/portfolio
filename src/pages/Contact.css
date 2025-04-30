@@ -2,6 +2,10 @@ section.contact {
     width: 72%;
 }
 
+section.contact > .contact-title {
+    margin-bottom: 8px;
+}
+
 section.contact > .contact-title > .contactez-moi {
     color: var(--color-highlight);
     font-size: 24px;
@@ -11,6 +15,7 @@ section.contact > .contact-title > .contactez-moi {
 .contact-form > .contact-stack > .input-box {
     padding: 32px;
     border: 1px dashed var(--color-highlight);
+    border-radius: 8px;
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
@@ -28,6 +33,14 @@ section.contact > .contact-title > .contactez-moi {
 .contact-form > .contact-stack > .input-box:nth-child(3) > .textarea{
     height: 200px;
     padding: 16px;
+}
+
+.contact-button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px dashed var(--color-highlight);
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
