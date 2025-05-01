@@ -1,3 +1,4 @@
+import photo from '../assets/photo.png'
 import "./About.css";
 
 export default function About() {
@@ -5,29 +6,19 @@ export default function About() {
     <section className="about">
       <img
         className="photo"
-        src="https://avatar.iran.liara.run/public/boy"
+        src={photo}
         alt="Avatar placeholder"
       />
       <div className="about-text">
         <h2>A propos de moi</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac orci
-          a ligula commodo luctus non vitae leo. Aliquam erat volutpat. Ut vitae
-          rhoncus eros. Aenean porttitor justo vel magna tincidunt, non lacinia
-          urna consectetur. Vestibulum fermentum sodales venenatis. Cras gravida
-          lectus in turpis pellentesque, eget consequat justo vehicula.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas.
-          <br />
-          Maecenas sed ex ornare, pretium diam vitae, gravida ex. Praesent
-          laoreet pellentesque quam et tristique. Phasellus lacinia elit eu enim
-          elementum venenatis. Integer feugiat, erat eget vehicula vehicula,
-          nisl elit pulvinar nunc, quis efficitur nibh velit fringilla ex.
-          Quisque laoreet, dolor vel rhoncus efficitur, enim felis elementum
-          ante, quis fermentum sem massa vel dolor. Aenean nec augue ut arcu
-          eleifend elementum a sit amet tellus. Quisque nec velit dui. Phasellus
-          sollicitudin quam in ante condimentum aliquet. Nullam lacinia
-          convallis bibendum.
+          Depuis tout jeune, je suis attiré par l'informatique et les nouvelles technologies en général ! Cela m'a conduit à entrer en BTS Services Informatiques aux Organisations, dans lequel j'ai étudié les fondamentaux du développement web et de la programmation, ainsi que de l'administration des systèmes et réseaux. J'ai obtenu ce diplôme en 2015.
+          <br /><br />
+          Suite à cela, j'ai eu l'occasion de travailler dans le milieu social, autre domaine qui m'intéressait beaucoup. Petite enfance, animation, travailler dans des collèges, j'ai essayé beaucoup de choses... Enfin j'ai été Accompagnant éducatif pendant plusieurs années, métier qui m'a énormément apporté, tant personnellement que professionnellement.
+          <br /><br />
+          C'est finalement en 2024 que je choisis de retourner vers le domaine de l'informatique et plus précisément dans le développement d'applications ! Je passe alors un titre de Concepteur Développeur d'Applications (CDA), équivalent Bac+4, qui m'apporte de solides compétences sur des technologies et domaines variés.
+          <br /><br />
+          En 2025, je commence l'aventure COODE-NT ! Petite entreprise avec de grands atouts, qui créé des applications web et mobiles ayant un impact positif dans le quotidien de ses utilisateurs.
         </p>
       </div>
     </section>

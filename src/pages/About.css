@@ -14,8 +14,11 @@
 }
 
 .about-text {
-  width: 32rem;
+  width: 72%;
   text-align: justify;
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 8px;
 }
 
 .about-text > h2 {
