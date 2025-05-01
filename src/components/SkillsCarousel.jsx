@@ -1,55 +1,37 @@
-import React from "react"
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
-import './SkillsCarousel.css'
-
-const carousel = (slider) => {
-  const z = 300
-  function rotate() {
-    const deg = 360 * slider.track.details.progress
-    slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`
-  }
-  slider.on("created", () => {
-    const deg = 360 / slider.slides.length
-    slider.slides.forEach((element, idx) => {
-      element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`
-    })
-    rotate()
-  })
-  slider.on("detailsChanged", rotate)
-}
+import React from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "./SkillsCarousel.css";
 
 export default function SkillsCarousel({ skills }) {
-    
-    const [sliderRef] = useKeenSlider(
-        {
-          loop: true,
-          selector: ".carousel__cell",
-          renderMode: "custom",
-          mode: "free-snap",
-        },
-        [carousel]
-      )
-  
-    return (
-    <div className="wrapper">
-      <div className="scene">
-        <div className="carousel keen-slider" ref={sliderRef}>
-          {skills.map((skill, index) => (
-            <div 
-              key={index} 
-              className={
-                skill.isLearning 
-                  ? `carousel__cell slide isLearning`
-                  : `carousel__cell slide`
-              }
-            >
-              <img className="skill-logo" src={skill.logo} alt={skill.name} />
-              <p className="skill-name">{skill.name}</p>
-            </div>
-          ))}
+  const [sliderRef] = useKeenSlider({
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 1, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 3, spacing: 10 },
+      },
+    },
+    slides: { perView: 1 },
+    loop: "true"
+  });
+
+  return (
+    <div className="keen-slider" ref={sliderRef}>
+      {skills.map((skill, index) => (
+        <div
+          key={index}
+          className={
+            skill.isLearning
+              ? `keen-slider__slide isLearning`
+              : `keen-slider__slide`
+          }
+        >
+          <img className="skill-logo" src={skill.logo} alt={skill.name} />
+          <p className="skill-name">{skill.name}</p>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
