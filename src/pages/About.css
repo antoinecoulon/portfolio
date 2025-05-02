@@ -11,6 +11,25 @@
   height: 16rem;
   border: 4px dashed var(--color-highlight);
   border-radius: 128px;
+  margin-top: 16px;
+}
+
+.about-links {
+  width: 72%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-links > .link > a > img {
+  width: 40px;
+  height: 40px;
 }
 
 .about-text {
@@ -22,6 +41,12 @@
 }
 
 .about-text > h2 {
+  margin: 16px 0;
+  padding: 8px;
+  border: 1px solid var(--color-highlight);
+}
+
+.about-text > h3 {
   margin: 16px 0;
   padding: 8px;
   border: 1px solid var(--color-highlight);

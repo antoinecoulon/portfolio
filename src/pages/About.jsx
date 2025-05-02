@@ -1,4 +1,7 @@
 import photo from '../assets/photo.png'
+import githubLogo from '../assets/github_dark.svg'
+import linkedinLogo from '../assets/linkedin.svg'
+import reactScrimba from '../assets/scrimba_learn-react_certificate.png'
 import "./About.css";
 
 export default function About() {
@@ -9,6 +12,16 @@ export default function About() {
         src={photo}
         alt="Avatar placeholder"
       />
+      <div className='about-links'>
+        <div className="link">
+          <a href="https://github.com/antoinecoulon" target='_blank'><img src={githubLogo} alt='GitHub logo' /></a>
+          <h3>GitHub</h3>
+        </div>
+        <div className="link">
+          <a href="https://www.linkedin.com/in/antoine-coulon-65638882/" target='_blank'><img src={linkedinLogo} alt='LinkedIn logo' /></a>
+          <h3>LinkedIn</h3>
+        </div>
+      </div>
       <div className="about-text">
         <h2>A propos de moi</h2>
         <p>
@@ -20,6 +33,10 @@ export default function About() {
           <br /><br />
           En 2025, je commence l'aventure COODE-NT ! Petite entreprise avec de grands atouts, qui créé des applications web et mobiles ayant un impact positif dans le quotidien de ses utilisateurs.
         </p>
+        <h3 className='about-text-certificate'>Certificats:</h3>
+        <div className="certificates">
+          <img src={reactScrimba} alt="Certificat React Scrimba" />
+        </div>
       </div>
     </section>
   );
