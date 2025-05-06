@@ -1,37 +1,39 @@
 // Swiper React components
-import { Swiper, SwiperSlide} from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
-import Project from '../components/Project'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import Project from "../components/Project";
 
 // Swiper styles
-import 'swiper/css'
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import './Projects.css'
-import { projects } from '../data/projects';
+import { projects } from "../data/projects";
+import "./Projects.css";
 
 export default function Projects() {
-  const projectsDetails = projects.map(project => {
-    return <Project 
-      title={project.title}
-      description={project.description}
-      screenshot={project.screenshot}
-      repo={project.repo}
-      live={project.live}
-      stack={project.stack}
-    />
-  })
+  const projectsDetails = Object.entries(projects).map(([key, project]) => {
+    return (
+      <Project
+        key={key}
+        title={project.title}
+        description={project.description}
+        screenshot={project.screenshot}
+        repo={project.repo}
+        live={project.live}
+        stack={project.stack}
+      />
+    );
+  });
 
-  const slides = projectsDetails.map(slide => (
-    <SwiperSlide className='swiper-slide'>{slide}</SwiperSlide>
-  ))
+  const slides = projectsDetails.map((slide) => (
+    <SwiperSlide className="swiper-slide">{slide}</SwiperSlide>
+  ));
 
   return (
     <section className="projects">
-      
       <Swiper
-        className='swiper'
+        className="swiper"
         modules={[Navigation, Pagination]}
         spaceBetween={50}
         slidesPerView={1}

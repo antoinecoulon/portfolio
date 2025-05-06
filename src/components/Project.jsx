@@ -1,33 +1,33 @@
-import './Project.css'
+import "./Project.css";
 
-export default function Project(projects) {    
-    
-    return (
-        <article>
-            <div className="screenshots">
-                <img src={projects.screenshot} alt="screen" />
-            </div>
-            <div className="infos">
-                <h2>{projects.title}</h2>
-                <p>{projects.description}</p>
-            </div>
-            <div className="others">
-                <div className="links">
-                    <span>{projects.repo}</span>
-                    <span>{projects.live}</span>
-                </div>
-                <div className="technos">
-                    {
-                        projects.stack.map((stack, index) => (
-                            <span key={index}>
-                                {stack.name}
-                                {stack.logo}
-                            </span>
-                        ))
-                    }
-                    
-                </div>
-            </div>
-        </article>
-    )
+export default function Project({
+  title,
+  description,
+  screenshot,
+  repo,
+  live,
+  stack,
+}) {
+  return (
+    <article>
+      <div className="screenshots">
+        <img src={screenshot} alt="screen" />
+      </div>
+      <div className="infos">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div className="others">
+        <div className="links">
+          <span>{repo}</span>
+          <span>{live}</span>
+        </div>
+        <div className="technos">
+          {Object.entries(stack).map((stack, index) => (
+            <span key={index}>{stack.name}</span>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
 }
