@@ -1,10 +1,13 @@
 import saveThingsScreenshot from "../assets/projects-screenshots/screenshot_save-things-extension.png";
+import devDocsScreenshot from "../assets/projects-screenshots/screenshot_dev-docs.png"
 
 import htmlIcon from "../assets/skills-icons/html5.svg";
 import cssIcon from "../assets/skills-icons/css.svg";
 import reactIcon from "../assets/skills-icons/react_dark.svg";
 import typescriptIcon from "../assets/skills-icons/typescript.svg";
 import viteIcon from "../assets/skills-icons/vitejs.svg";
+import markdownIcon from "../assets/skills-icons/markdown-dark.svg"
+import jsIcon from "../assets/skills-icons/javascript.svg";
 
 export const projects = {
   saveThings: {
@@ -15,44 +18,23 @@ export const projects = {
     repository: "https://github.com/antoinecoulon/save-things_chrome-extension",
     demo: "undefined",
     stack: [
-      {
-        name: "HTML",
-        logo: htmlIcon,
-      },
-      {
-        name: "CSS",
-        logo: cssIcon,
-      },
-      {
-        name: "React.js",
-        logo: reactIcon,
-      },
-      {
-        name: "Typescript",
-        logo: typescriptIcon,
-      },
-      {
-        name: "Vite",
-        logo: viteIcon,
-      },
+      { name: "HTML", logo: htmlIcon },
+      { name: "CSS",  logo: cssIcon  },
+      { name: "React.js", logo: reactIcon },
+      { name: "Typescript", logo: typescriptIcon },
+      { name: "Vite", logo: viteIcon },
     ],
   },
   devDocs: {
-    title: "Projet 2",
+    title: "Dev Docs",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quas voluptatum esse veniam saepe placeat necessitatibus laudantium? Non, dolor. Natus voluptates nihil sunt beatae, sit corrupti aspernatur odit similique culpa, possimus ipsum id consequatur omnis impedit, porro quidem numquam aliquid delectus asperiores sapiente nulla dolorum labore molestiae repudiandae? Ad, et.",
-    screenshot: "https://picsum.photos/850/730",
-    repo: "test",
-    live: "test",
+      "Dev Docs est un site construit grâce à Docusaurus. Il me permet de prendre mes notes de cours, de conserver de la documentation et des ressources et de réaliser une gestion de mes projets.",
+    screenshot: devDocsScreenshot,
+    repository: "https://github.com/antoinecoulon/antoinecoulon-docs",
+    live: "https://antoinecoulon.github.io/antoinecoulon-docs/",
     stack: [
-      {
-        name: "HTML",
-        logo: "logo",
-      },
-      {
-        name: "CSS",
-        logo: "",
-      },
+      { name: "Markdown", logo: markdownIcon },
+      { name: "JavaScript", logo: jsIcon }
     ],
   },
 };
