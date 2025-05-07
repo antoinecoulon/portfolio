@@ -28,7 +28,8 @@ article > div.screenshots > img {
 article > div.infos {
   width: 100%;
   max-width: 700px;
-  padding: 16px;
+  padding: 0 16px;
+  margin: 0;
   gap: 4px;
   flex-direction: column;
   align-items: center;
@@ -45,8 +46,32 @@ article > div.infos > h2 {
 article > div.others {
   width: 100%;
   max-width: 700px;
-  padding: 16px;
+  max-height: 48px;
+  margin: 0;
+  padding: 0 16px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+article > div.others > div.links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+article > div.others > div.technos {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+article > div.others > div.links > a > img {
+  width: 32px;
+}
+
+article > div.others > div.technos > span > img {
+  width: 32px;
 }
 
 @media (max-width: 768px) {
@@ -66,7 +91,6 @@ article > div.others {
     }
   }
 
-/* Responsive */
 @media (max-width: 480px) {
   article {
     padding: 16px 8px;

@@ -1,13 +1,15 @@
 import "./Project.css";
+import github from "../assets/github_dark.svg"
+import demo from "../assets/demo-live.svg"
 
 export default function Project({
   title,
   description,
   screenshot,
-  repo,
+  repository,
   live,
   stack,
-}) {
+}) {  
   return (
     <article>
       <div className="screenshots">
@@ -19,12 +21,18 @@ export default function Project({
       </div>
       <div className="others">
         <div className="links">
-          <span>{repo}</span>
-          <span>{live}</span>
+          <a href={repository} target="_blank" rel="noopener noreferrer">
+            <img src={github} alt="Github Logo" />
+          </a>
+          {live === undefined 
+            ? null 
+            : <a href={live} target="_blank" rel="noopener noreferrer"><img src={demo} alt="Demo Live Logo" /></a>}
         </div>
         <div className="technos">
-          {Object.entries(stack).map((stack, index) => (
-            <span key={index}>{stack.name}</span>
+          {Object.entries(stack).map(([key, tech], index) => (
+            <span key={`${key}-${index}`}>
+              <img src={tech.logo} alt={`${tech.name}Logo`} />
+            </span>
           ))}
         </div>
       </div>

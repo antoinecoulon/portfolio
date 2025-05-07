@@ -13,13 +13,15 @@ import "./Projects.css";
 
 export default function Projects() {
   const projectsDetails = Object.entries(projects).map(([key, project]) => {
+    console.log(project.live);
+    
     return (
       <Project
         key={key}
         title={project.title}
         description={project.description}
         screenshot={project.screenshot}
-        repo={project.repo}
+        repository={project.repository}
         live={project.live}
         stack={project.stack}
       />
