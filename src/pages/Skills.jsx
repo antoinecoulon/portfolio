@@ -19,6 +19,7 @@ import springLogo from "../assets/skills-icons/spring.svg";
 import tailwindLogo from "../assets/skills-icons/tailwindcss.svg";
 import typescriptLogo from "../assets/skills-icons/typescript.svg";
 import viteLogo from "../assets/skills-icons/vitejs.svg";
+import markdownLogo from "../assets/skills-icons/markdown-dark.svg"
 
 
 export default function Skills() {
@@ -41,6 +42,7 @@ export default function Skills() {
         { name: "MongoDB", logo: mongodbLogo, isLearning: false },
         { name: "Git", logo: gitLogo, isLearning: false },
         { name: "Vite", logo: viteLogo, isLearning: false },
+        { name: "Markdown", logo: markdownLogo, isLearning: false },
     ]
     
     return (
