@@ -55,9 +55,15 @@
 @media (max-width: 768px) {
   .about-text {
     width: 24rem;
-    max-height: 300px; 
+    max-height: 300px;
     overflow-y: auto;
     padding-right: 8px;
     margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    width: 80%;
   }
 }

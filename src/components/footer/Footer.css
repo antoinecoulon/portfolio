@@ -1,7 +1,11 @@
 footer {
-    height: 32px;
-    padding: 8px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 10px;
+  height: 32px;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  color: var(--color-accent-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

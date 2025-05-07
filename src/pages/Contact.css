@@ -1,63 +1,63 @@
 section.contact {
-    width: 72%;
+  width: 72%;
 }
 
 section.contact > .contact-title {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 section.contact > .contact-title > .contactez-moi {
-    color: var(--color-highlight);
-    font-size: 24px;
-    font-weight: bolder;
+  color: var(--color-highlight);
+  font-size: 24px;
+  font-weight: bolder;
 }
 
 .contact-form > .contact-stack > .input-box {
-    padding: 32px;
-    border: 1px dashed var(--color-highlight);
-    border-radius: 8px;
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  padding: 32px;
+  border: 1px dashed var(--color-highlight);
+  border-radius: 8px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .contact-form > .contact-stack > .input-box:nth-child(1) > .input {
-    padding: 16px;
+  padding: 16px;
 }
 
-.contact-form > .contact-stack > .input-box:nth-child(2) > .input  {
-    padding: 16px;
+.contact-form > .contact-stack > .input-box:nth-child(2) > .input {
+  padding: 16px;
 }
 
-.contact-form > .contact-stack > .input-box:nth-child(3) > .textarea{
-    height: 200px;
-    padding: 16px;
+.contact-form > .contact-stack > .input-box:nth-child(3) > .textarea {
+  height: 200px;
+  padding: 16px;
 }
 
 .contact-button {
-    display: block;
-    margin: 0 auto;
-    padding: 16px;
-    border: 1px dashed var(--color-highlight);
-    border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px dashed var(--color-highlight);
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
-    section.contact {
-        max-height: 700px;
-        overflow: auto;
-        padding-right: 8px;
-    }
+  section.contact {
+    max-height: 700px;
+    overflow: auto;
+    padding-right: 8px;
+  }
 
-    .contact-form > .contact-stack > .input-box {
-        padding: 24px;
-        margin-bottom: 16px;
-        gap: 4px;
-    }
-    
-    .contact-form > .contact-stack > .input-box:nth-child(3) > .textarea{
-        height: 120px;
-        padding: 8px;
-    }
+  .contact-form > .contact-stack > .input-box {
+    padding: 24px;
+    margin-bottom: 16px;
+    gap: 4px;
+  }
+
+  .contact-form > .contact-stack > .input-box:nth-child(3) > .textarea {
+    height: 120px;
+    padding: 8px;
+  }
 }

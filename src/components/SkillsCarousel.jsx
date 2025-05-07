@@ -14,7 +14,7 @@ export default function SkillsCarousel({ skills }) {
       },
     },
     slides: { perView: 1 },
-    loop: "true"
+    loop: "true",
   });
 
   return (

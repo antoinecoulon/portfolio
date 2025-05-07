@@ -1,5 +1,8 @@
 article {
   display: flex;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   gap: 16px;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +34,7 @@ article > div.infos {
   padding: 0 16px;
   margin: 0;
   gap: 4px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -46,12 +50,13 @@ article > div.infos > h2 {
 article > div.others {
   width: 100%;
   max-width: 700px;
-  max-height: 48px;
   margin: 0;
   padding: 0 16px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 8px;
 }
 
 article > div.others > div.links {
@@ -75,25 +80,25 @@ article > div.others > div.technos > span > img {
 }
 
 @media (max-width: 768px) {
-    article > div.infos {
-      gap: 2px;
-      padding: 12px;
-    }
-  
-    article > div.infos > h2 {
-      margin-bottom: 4px;
-      font-size: 1.2rem;
-    }
-  
-    article > div.infos > p {
-      margin-top: 0;
-      font-size: 0.95rem;
-    }
+  article > div.infos {
+    gap: 2px;
+    padding: 12px;
   }
+
+  article > div.infos > h2 {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+  }
+
+  article > div.infos > p {
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+}
 
 @media (max-width: 480px) {
   article {
-    padding: 16px 8px;
+    padding: 16px 8px 32px;
   }
 
   article > div.screenshots > img {
@@ -102,5 +107,11 @@ article > div.others > div.technos > span > img {
 
   article > div.infos > h2 {
     font-size: 1.3rem;
+  }
+
+  article > div.others {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 }

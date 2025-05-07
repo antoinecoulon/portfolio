@@ -1,61 +1,61 @@
 section.projects {
-    width: 100%;
-    min-height: 500px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-top: 16px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 16px;
   padding-bottom: 32px;
   box-sizing: border-box;
 }
 
 .swiper {
-    min-height: auto;
   overflow: visible;
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
-/* Style pour chaque slide */
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   padding: 0 16px;
   box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.swiper-pagination-bullet {
+  background: #3b82f6;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1d4ed8;
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+  .swiper {
+    padding: 0 10px 60px;
   }
-  
-  /* Responsive Swiper */
-  @media (max-width: 768px) {
-       
-    .swiper {
-      padding: 0 10px 60px; /* ajoute un peu de marge à gauche/droite */
-    }
-  
-    .swiper-slide {
-      flex-direction: column;
-      padding: 0 10px;
-    }
+
+  .swiper-slide {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
   }
-  
-  /* Pagination bullets */
-  .swiper-pagination-bullet {
-    background: #3b82f6;
-    opacity: 0.5;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #1d4ed8;
-    opacity: 1;
-  }
-  
-  /* Navigation buttons */
+}
+
+@media (max-width: 480px) {
   .swiper-button-next,
   .swiper-button-prev {
-    color: #3b82f6;
+    scale: 0.8;
+    margin-top: 8px;
   }
-  
-  @media (max-width: 480px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      scale: 0.8; /* réduit un peu les boutons sur très petits écrans */
-    }
+  section.projects {
+    padding-top: 24px;
+    padding-bottom: 48px;
   }
+}

@@ -1,6 +1,6 @@
 import "./Project.css";
-import github from "../assets/github_dark.svg"
-import demo from "../assets/demo-live.svg"
+import github from "../assets/github_dark.svg";
+import demo from "../assets/demo-live.svg";
 
 export default function Project({
   title,
@@ -9,7 +9,7 @@ export default function Project({
   repository,
   live,
   stack,
-}) {  
+}) {
   return (
     <article>
       <div className="screenshots">
@@ -24,9 +24,11 @@ export default function Project({
           <a href={repository} target="_blank" rel="noopener noreferrer">
             <img src={github} alt="Github Logo" />
           </a>
-          {live === undefined 
-            ? null 
-            : <a href={live} target="_blank" rel="noopener noreferrer"><img src={demo} alt="Demo Live Logo" /></a>}
+          {live === undefined ? null : (
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              <img src={demo} alt="Demo Live Logo" />
+            </a>
+          )}
         </div>
         <div className="technos">
           {Object.entries(stack).map(([key, tech], index) => (

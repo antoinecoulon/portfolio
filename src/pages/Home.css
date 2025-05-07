@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monofett&display=swap");
 
 main {
   font-family: "Monoton", sans-serif;
@@ -15,7 +15,7 @@ main {
 }
 
 .box {
-  margin:  0;
+  margin: 0;
 }
 
 .letter {

@@ -14,7 +14,7 @@ import "./Projects.css";
 export default function Projects() {
   const projectsDetails = Object.entries(projects).map(([key, project]) => {
     console.log(project.live);
-    
+
     return (
       <Project
         key={key}
@@ -28,8 +28,10 @@ export default function Projects() {
     );
   });
 
-  const slides = projectsDetails.map((slide) => (
-    <SwiperSlide className="swiper-slide">{slide}</SwiperSlide>
+  const slides = projectsDetails.map((slide, index) => (
+    <SwiperSlide className="swiper-slide" key={index}>
+      {slide}
+    </SwiperSlide>
   ));
 
   return (
@@ -41,6 +43,7 @@ export default function Projects() {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        autoHeight={true}
       >
         {slides}
       </Swiper>
