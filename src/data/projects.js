@@ -1,6 +1,7 @@
 import saveThingsScreenshot from "../assets/projects-screenshots/screenshot_save-things-extension.png";
 import devDocsScreenshot from "../assets/projects-screenshots/screenshot_dev-docs.png"
 import memeGeneratorScreenshot from "../assets/projects-screenshots/screenshot_meme-generator.png"
+import chefLlamaScreenshot from "../assets/projects-screenshots/screenshot_chef-llama.png"
 
 import htmlIcon from "../assets/skills-icons/html5.svg";
 import cssIcon from "../assets/skills-icons/css.svg";
@@ -53,4 +54,18 @@ export const projects = {
       { name: "Vite", logo: viteIcon }
     ],
   },
+  chefLlama: {
+    title: "Chef Llama",
+    description: "Une application pour générer des recettes de cuisine via le modèle Llama de Meta. Ce travail est basé sur un très bon cours de Scrimba. Il permet d'aborder de nombreuses notions de React.js. Retravaillé avec Typescript.",
+    screenshot: chefLlamaScreenshot,
+    repository: "https://github.com/antoinecoulon/chef-llama",
+    live: "https://chef-llama.vercel.app/",
+    stack: [
+      { name: "HTML", logo: htmlIcon },
+      { name: "CSS",  logo: cssIcon  },
+      { name: "React.js", logo: reactIcon },
+      { name: "Typescript", logo: typescriptIcon },
+      { name: "Vite", logo: viteIcon }
+    ]
+  }
 };
